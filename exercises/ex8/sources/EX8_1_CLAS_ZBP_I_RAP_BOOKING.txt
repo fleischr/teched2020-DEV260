@@ -13,7 +13,8 @@ CLASS lhc_Booking IMPLEMENTATION.
 
   METHOD calculateBookingID.
     DATA max_bookingid TYPE /dmo/booking_id.
-    DATA update TYPE TABLE FOR UPDATE ZI_RAP_Travel_####\\Booking.
+    "Just change this to ZI_RAP_Booking_#### instead of ZI_RAP_Travel_####\\Booking
+    DATA update TYPE TABLE FOR UPDATE ZI_RAP_Booking_####.
 
     " Read all travels for the requested bookings.
     " If multiple bookings of the same travel are requested, the travel is returned only once.
